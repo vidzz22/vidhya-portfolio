@@ -1,9 +1,11 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b z-50">
-      <div className="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
+    <nav className="fixed w-full bg-black text-white py-4 z-50">
+      <div className="max-w-6xl mx-auto px-6 flex justify-between">
         <span className="font-semibold">Vidhya</span>
-        <div className="space-x-8 text-sm">
+
+        <div className="space-x-6 text-sm">
+          <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>

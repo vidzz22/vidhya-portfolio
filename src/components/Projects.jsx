@@ -1,37 +1,65 @@
+import { motion } from "framer-motion"
+
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-8 max-w-4xl mx-auto">
-      <h3 className="text-2xl font-semibold mb-12">Selected Projects</h3>
+    <section id="projects" className="py-28 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
 
-      <div className="space-y-10">
+        <h2 className="text-3xl font-semibold text-center mb-16">
+          Featured Projects
+        </h2>
 
-        <div className="border p-6 rounded-lg hover:shadow-sm transition">
-          <h4 className="font-semibold text-lg">House Price Prediction</h4>
-          <p className="mt-2 text-gray-600 text-sm">
-            Built regression model using Scikit-learn to predict housing prices.
-            Performed feature engineering and cross-validation.
-          </p>
-          <a
-            href="https://github.com/vidzz22"
-            className="underline text-sm mt-3 inline-block"
+        <div className="grid md:grid-cols-2 gap-12">
+
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden"
           >
-            View on GitHub
-          </a>
-        </div>
+            <img
+              src="/project1.jpg"
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold">
+                Sentiment Analysis Model
+              </h3>
+              <p className="mt-3 text-gray-600 text-sm">
+                LSTM-based deep learning model to classify movie reviews.
+              </p>
+              <a
+                href="https://github.com/vidzz22"
+                className="mt-4 inline-block text-blue-600 text-sm"
+              >
+                View Code →
+              </a>
+            </div>
+          </motion.div>
 
-        <div className="border p-6 rounded-lg hover:shadow-sm transition">
-          <h4 className="font-semibold text-lg">Customer Churn Analysis</h4>
-          <p className="mt-2 text-gray-600 text-sm">
-            Exploratory data analysis and classification modeling to predict churn.
-          </p>
-          <a
-            href="https://github.com/vidzz22"
-            className="underline text-sm mt-3 inline-block"
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden"
           >
-            View on GitHub
-          </a>
-        </div>
+            <img
+              src="/project2.jpg"
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold">
+                Image Classification CNN
+              </h3>
+              <p className="mt-3 text-gray-600 text-sm">
+                CNN model for multi-class image recognition using TensorFlow.
+              </p>
+              <a
+                href="https://github.com/vidzz22"
+                className="mt-4 inline-block text-blue-600 text-sm"
+              >
+                View Code →
+              </a>
+            </div>
+          </motion.div>
 
+        </div>
       </div>
     </section>
   )
