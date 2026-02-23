@@ -1,11 +1,12 @@
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-8 py-6 border-b text-sm">
-      <h1 className="font-semibold">Vidhya Walke</h1>
-      <div className="space-x-6">
-        <a href="#projects" className="hover:text-gray-500">Projects</a>
-        <a href="#certifications" className="hover:text-gray-500">Certifications</a>
-        <a href="#contact" className="hover:text-gray-500">Contact</a>
+    <nav className="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b z-50">
+      <div className="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
+        <span className="font-semibold">Vidhya</span>
+        <div className="space-x-8 text-sm">
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </nav>
   )

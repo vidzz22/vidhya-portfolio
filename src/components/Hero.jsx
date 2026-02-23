@@ -1,31 +1,42 @@
+import { motion } from "framer-motion"
+
 export default function Hero() {
   return (
-    <section className="text-center py-28 px-6">
-      <h2 className="text-4xl md:text-5xl font-bold">
-        Aspiring Data Scientist
-      </h2>
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-white to-gray-50">
+      
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl md:text-7xl font-bold leading-tight"
+      >
+        Vidhya Walke
+      </motion.h1>
 
-      <p className="mt-6 text-gray-600 max-w-xl mx-auto">
-        I build machine learning models and data-driven solutions 
-        to solve real-world problems using Python, SQL and statistical analysis.
-      </p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="mt-6 text-gray-600 max-w-xl"
+      >
+        Data Science & Machine Learning Enthusiast  
+        building intelligent systems through code & curiosity.
+      </motion.p>
 
-      <div className="mt-10 space-x-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="mt-10"
+      >
         <a
-          href="/resume.pdf"
-          className="px-6 py-2 border rounded-md hover:bg-black hover:text-white transition"
+          href="#projects"
+          className="text-sm border px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
         >
-          Download Resume
+          View My Work
         </a>
+      </motion.div>
 
-        <a
-          href="https://github.com/vidzz22"
-          target="_blank"
-          className="px-6 py-2 bg-black text-white rounded-md"
-        >
-          GitHub
-        </a>
-      </div>
     </section>
   )
 }
